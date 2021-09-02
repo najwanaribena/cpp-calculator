@@ -43,16 +43,19 @@ int main() {
                 result = sqrt(num1);
                 break;
             default:
+            	opr = 'x';
                 result = 0;
                 break;
         }
         
         cout << "\n";
         
-        if (opr != 'r') {
+        if (opr != 'r' && opr != 'x') {
 	        cout << num1 << " " << opr << " " << num2 << " = " << result << endl;
-		} else {
+		} else if (opr == 'r') {
 			cout << "root of " << num1 << " is " << result << endl;
+		} else {
+			cout << "please enter operator correctly" << endl;
 		}
 
         cout << "\nrepeat(y/n)? ";
